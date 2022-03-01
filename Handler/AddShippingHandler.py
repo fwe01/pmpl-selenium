@@ -8,7 +8,7 @@ class AddShippingHandler:
     def __init__(self, driver):
         self.driver = driver
 
-    def add (self):
+    def add(self):
         self.driver.get('http://pmpl.frederickwilliame.com/admin/shipping/create')
 
         faker = Faker()
