@@ -1,3 +1,5 @@
+from selenium.webdriver.common.by import By
+
 from Handler.AddShippingHandler import AddShippingHandler
 from Handler.LoginHandler import LoginHandler
 from selenium import webdriver
@@ -11,7 +13,7 @@ if __name__ == '__main__':
     loginHandler.login()
 
     wait = WebDriverWait(driver, 10)
-    element = wait.until(EC.presence_of_element_located(('css selector', '.alert.alert-success')))
+    element = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '.alert.alert-success')))
 
     addShippingHandler = AddShippingHandler(driver)
     addShippingHandler.add()
